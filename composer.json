@@ -1,0 +1,9 @@
+{
+  "name": "ec-cube/QrcodeGenerator",
+  "version": "1.0.0",
+  "description": "QRコード表示プラグイン",
+  "type": "eccube-plugin",
+  "extra": {
+    "code": "QrcodeGenerator"
+  }
+}

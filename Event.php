@@ -2,6 +2,7 @@
 
 namespace Plugin\QrcodeGenerator;
 
+use Eccube\Event\TemplateEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 class Event implements EventSubscriberInterface
@@ -11,6 +12,13 @@ class Event implements EventSubscriberInterface
      */
     public static function getSubscribedEvents()
     {
-        return [];
+        return [
+            'qrcode.twig' => "onQrcodeTwig",
+        ];
+    }
+
+    public function onQrcodeTwig(TemplateEvent $templateEvent)
+    {
+        $templateEvent->setParameter("name", "hoge");
     }
 }

@@ -22,11 +22,11 @@ class Config
     private $id;
 
     /**
-     * @var string
+     * @var int
      *
-     * @ORM\Column(name="name", type="string", length=255)
+     * @ORM\Column(name="size", type="integer", nullable=false, options={"unsigned":true})
      */
-    private $name;
+    private $size;
 
     /**
      * @return int
@@ -37,21 +37,21 @@ class Config
     }
 
     /**
-     * @return string
+     * @return int
      */
-    public function getName()
+    public function getSize()
     {
-        return $this->name;
+        return $this->size;
     }
 
     /**
-     * @param string $name
+     * @param int  $size
      *
      * @return $this;
      */
-    public function setName($name)
+    public function setSize($size)
     {
-        $this->name = $name;
+        $this->size = $size;
 
         return $this;
     }
